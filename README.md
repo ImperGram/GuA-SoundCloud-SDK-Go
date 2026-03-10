@@ -23,7 +23,7 @@ go get github.com/ImperGram/GuA-SoundCloud-SDK-Go@v0.0.1
 
 ### Документация
 
-Доступна [тут](https://github.com/ImperGram/GuA-SoundCloud-SDK-Go/wiki/GuA-SoundCloud-go)
+Доступна [тут](https://github.com/ImperGram/GuA-SoundCloud-SDK-Go/wiki/GuA-SoundCloud-go-RU)
 
 # EN
 ## GuA SoundCloud SDK on GO
