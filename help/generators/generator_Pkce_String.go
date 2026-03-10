@@ -16,3 +16,29 @@
 */
 
 package generators
+
+import (
+	"crypto/rand"
+	"crypto/sha256"
+	"encoding/base64"
+)
+
+func GenerateRandomString(length int) (string, error) {
+	bytes := make([]byte, length)
+	if _, err := rand.Read(bytes); err != nil {
+		return "", err
+	}
+
+	str := base64.RawURLEncoding.EncodeToString(bytes)
+
+	if len(str) > length {
+		return str[:length], nil
+	}
+	return str, nil
+}
+
+func GenerateCodeChallenge(codeVerifier string) string {
+	hash := sha256.Sum256([]byte(codeVerifier))
+
+	return base64.RawURLEncoding.EncodeToString(hash[:])
+}
