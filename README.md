@@ -5,4 +5,4 @@
 
 ### Лицензия
 
-- [GNU GENERAL PUBLIC LICENSE Version 3](https://github.com/ImperGram/GuA-SoundCloud-SDK_Go/LICENSE.txt)
+- [GNU GENERAL PUBLIC LICENSE Version 3](https://github.com/ImperGram/GuA-SoundCloud-SDK-Go/LICENSE.txt)
