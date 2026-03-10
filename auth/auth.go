@@ -25,8 +25,8 @@ import (
 	"net/url"
 	"strings"
 
-	"gua-soundcloud-sdk/auth/models"
-	"gua-soundcloud-sdk/help/generators"
+	"github.com/ImperGram/GuA-SoundCloud-SDK-Go/auth/models"
+	"github.com/ImperGram/GuA-SoundCloud-SDK-Go/help/generators"
 )
 
 type AuthSoundCloud struct {
