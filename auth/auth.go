@@ -26,7 +26,7 @@ import (
 	"strings"
 
 	"github.com/ImperGram/GuA-SoundCloud-SDK-Go/auth/models"
-	"github.com/ImperGram/GuA-SoundCloud-SDK-Go/help/generators"
+	"hub.mos.ru/gua/crypto-lib/src/pkce"
 )
 
 type AuthSoundCloud struct {
@@ -52,15 +52,15 @@ type AuthData struct {
 }
 
 func (a *AuthSoundCloud) GetAuthURL() (*AuthData, error) {
-	state, err := generators.GenerateRandomString(32)
+	state, err := pkce.RString(32)
 	if err != nil {
 		return nil, err
 	}
-	codeVerifier, err := generators.GenerateRandomString(64)
+	codeVerifier, err := pkce.RString(64)
 	if err != nil {
 		return nil, err
 	}
-	codeChallenge := generators.GenerateCodeChallenge(codeVerifier)
+	codeChallenge := pkce.CodeChallenge(codeVerifier)
 
 	params := url.Values{}
 	params.Add("client_id", a.ClientID)
